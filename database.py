@@ -10,9 +10,17 @@ import enum
 dotenv.load_dotenv()
 url = getenv("DATABASE_URL")
 
+
+
 engine = create_async_engine(url=url, echo=True) #type: ignore
 
 async_session = async_sessionmaker(engine, expire_on_commit=False)
+
+async def get_db():
+    async with async_session() as session:
+        yield session
+
+
 base = declarative_base()
 
 class Companyrole(enum.Enum):
