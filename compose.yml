@@ -1,0 +1,15 @@
+services:
+  postgresql:
+    image: postgres:17
+    container_name: postgres_database
+    environment:
+      POSTGRES_DB: chestny_znak
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: chestnyznaksamalote11
+    ports: 
+      - "5432:5432"
+    volumes: 
+      - "postgres_data:/var/lib/postgresql/data"
+
+volumes:
+  postgres_data:
