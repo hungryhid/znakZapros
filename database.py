@@ -40,6 +40,7 @@ class Statuscode(enum.Enum):
 class User(base):
     __tablename__ = "users"
     id = Column(Integer, nullable=False, primary_key=True)
+    name = Column(String, nullable=False)
     email = Column(String, nullable=False, unique=True)
     password_hash = Column(String, nullable=False)
     created_at = Column(DateTime, server_default=func.now(),nullable=False)
