@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #dcfce7 0%, transparent 35%),
+        #f8fafc;
+
+    color: #0f172a;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 36px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.1),
+        0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 700;
+    font-size: 20px;
+
+    margin-bottom: 40px;
+}
+
+.logo-mark {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: #16a34a;
+    color: white;
+
+    font-size: 20px;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #16a34a;
+
+    box-shadow:
+        0 0 0 4px rgba(22, 163, 74, 0.1);
+}
+
+form button,
+.secondary-button {
+    border: none;
+    border-radius: 12px;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+form button {
+    margin-top: 4px;
+
+    background: #16a34a;
+    color: white;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+form button:hover {
+    background: #15803d;
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+.switch-text {
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: #64748b;
+    font-size: 14px;
+}
+
+.link-button {
+    border: none;
+    background: none;
+
+    color: #16a34a;
+
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+.error {
+    min-height: 20px;
+
+    margin-top: 14px;
+
+    color: #dc2626;
+
+    font-size: 14px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 24px 0;
+}
+
+.profile-info div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+}
+
+.profile-info span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.profile-info strong {
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.secondary-button {
+    width: 100%;
+
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.secondary-button:hover {
+    background: #cbd5e1;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 26px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}

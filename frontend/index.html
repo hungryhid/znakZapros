@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помощник Честного знака</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<main class="auth-page">
+    <section class="auth-card">
+
+        <div class="logo">
+            <span class="logo-mark">✓</span>
+            <span>Честный знак</span>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="login-form" class="form-container active">
+            <h1>С возвращением</h1>
+            <p class="subtitle">Войдите в свой аккаунт</p>
+
+            <form id="login">
+                <label>
+                    Email
+                    <input
+                        id="login-email"
+                        type="email"
+                        placeholder="example@mail.ru"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Пароль
+                    <input
+                        id="login-password"
+                        type="password"
+                        placeholder="Введите пароль"
+                        required
+                    >
+                </label>
+
+                <button type="submit">Войти</button>
+            </form>
+
+            <p id="login-error" class="error"></p>
+
+            <p class="switch-text">
+                Нет аккаунта?
+                <button type="button" class="link-button" id="show-register">
+                    Зарегистрироваться
+                </button>
+            </p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="register-form" class="form-container">
+            <h1>Создать аккаунт</h1>
+            <p class="subtitle">Начните пользоваться сервисом</p>
+
+            <form id="register">
+                <label>
+                    Имя
+                    <input
+                        id="register-name"
+                        type="text"
+                        placeholder="Данил"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Email
+                    <input
+                        id="register-email"
+                        type="email"
+                        placeholder="example@mail.ru"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Пароль
+                    <input
+                        id="register-password"
+                        type="password"
+                        placeholder="Минимум 6 символов"
+                        required
+                    >
+                </label>
+
+                <button type="submit">Создать аккаунт</button>
+            </form>
+
+            <p id="register-error" class="error"></p>
+
+            <p class="switch-text">
+                Уже есть аккаунт?
+                <button type="button" class="link-button" id="show-login">
+                    Войти
+                </button>
+            </p>
+        </div>
+
+        <!-- PROFILE -->
+        <div id="profile" class="form-container">
+            <h1>Профиль</h1>
+
+            <div class="profile-info">
+                <div>
+                    <span>ID</span>
+                    <strong id="profile-id"></strong>
+                </div>
+
+                <div>
+                    <span>Имя</span>
+                    <strong id="profile-name"></strong>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong id="profile-email"></strong>
+                </div>
+
+                <div>
+                    <span>Дата регистрации</span>
+                    <strong id="profile-created"></strong>
+                </div>
+            </div>
+
+            <button id="logout" class="secondary-button">
+                Выйти
+            </button>
+        </div>
+
+    </section>
+</main>
+
+
+<script src="/static/app.js"></script>
+</body>
+</html>
